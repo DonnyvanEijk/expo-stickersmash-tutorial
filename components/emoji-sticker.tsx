@@ -16,9 +16,9 @@ export default function EmojiSticker({ imageSize, stickerSource }: Props) {
         .numberOfTaps(2)
         .onStart(() => {
             if (scaleSticker.value !== imageSize * 2) {
-                scaleSticker.value = scaleSticker.value * 2;
+                scaleSticker.value = imageSize * 2;
             } else {
-                scaleSticker.value = Math.round(scaleSticker.value / 2);
+                scaleSticker.value = imageSize;
             }
         });
 
@@ -52,7 +52,7 @@ export default function EmojiSticker({ imageSize, stickerSource }: Props) {
 
     return (
         <GestureDetector gesture={drag}>
-            <Animated.View style={[containerStyle, { top: -350 }]}>
+            <Animated.View style={[containerStyle, { position: 'absolute', top: 0, left: 0 }]}>
                 <GestureDetector gesture={doubleTap}>
                     <Animated.Text style={[imageStyle, { fontSize: imageSize }]}>{stickerSource}</Animated.Text>
                 </GestureDetector>
