@@ -10,7 +10,8 @@
     "newArchEnabled": true,
     "runtimeVersion": "1.0.0",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.donnyvaneijk.sticksmash"
     },
     "android": {
       "adaptiveIcon": {
@@ -45,6 +46,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "3e15b1ed-6f94-4252-9e79-5f1304b33e0d"
+      }
     }
   }
 }
